@@ -1,5 +1,5 @@
 {
-  "name": "codemirror-lang-waterproof",
+  "name": "@impermeable/codemirror-lang-waterproof",
   "version": "1.0.0",
   "description": "CodeMirror language support for the Waterproof language",
   "homepage": "https://github.com/impermeable/codemirror-lang-waterproof#readme",
@@ -12,21 +12,26 @@
   },
   "license": "MIT",
   "author": "impermeable",
-  "type": "commonjs",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "exports": {
+    "import": "./dist/index.js"
+  },
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "npx jest",
     "lezer-generator": "npx lezer-generator --output src/syntax.ts --typeScript src/syntax.grammar",
     "esbuild": "node esbuild.mjs --release",
     "gen-types": "npx tsc",
-    "build": "npm run gen-types && npm run esbuild",
+    "build": "npm run lezer-generator && npm run gen-types && npm run esbuild",
     "lint": "npx eslint .",
     "lint-fix": "npx eslint . --fix"
   },
   "dependencies": {
-    "@codemirror/language": "^6.12.1",
     "@lezer/highlight": "^1.2.3",
     "@lezer/lr": "^1.4.7"
+  },
+  "peerDependencies": {
+    "@codemirror/language": "^6.12.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
