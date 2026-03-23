@@ -48,7 +48,7 @@ export const highlight_light = HighlightStyle.define([
 // Defining the Waterproof language syntax, highlighting and indentation
 export const waterproofLanguage = LRLanguage.define({
     languageData: {
-        closeBrackets: { brackets: ["(", "[", "{", "'", '"', "`"] },
+        closeBrackets: { brackets: ["(", "[", "{", "'", '"', "`"], before: ")]}:;>." },
         commentTokens: { block: {open: "(* ", close: " *)"} },
     },
     parser: parser.configure({
