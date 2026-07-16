@@ -25,6 +25,6 @@ export const
   Vernac = 52,
   Lemmas = 69,
   LemmaKeyword = 70,
-  Definitions = 74,
-  DefinitionKeyword = 75,
-  ArgumentEnd = 79
+  Definitions = 75,
+  DefinitionKeyword = 76,
+  ArgumentEnd = 80

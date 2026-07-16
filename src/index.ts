@@ -58,6 +58,7 @@ export const waterproofLanguage = LRLanguage.define({
                 "Lemma": tags.lemma,
                 "Theorem": tags.lemma,
                 "Example": tags.lemma,
+		"Goal": tags.lemma,
                 // DefinitionKeyword
                 "Definition": tags.definition,
                 "Inductive": tags.definition,

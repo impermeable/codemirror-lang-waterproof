@@ -78,7 +78,10 @@ LemmaKeyword {
     Theorem
         { "Theorem" } |
     Example
-        { "Example" }
+        { "Example" } |
+    Goal
+        { "Goal" }
+
 }
 
 DefinitionKeyword { 
